@@ -1,0 +1,140 @@
+.table-container {
+  overflow-x: auto;
+  width: 100%;
+}
+
+.container {
+    padding: 2rem;
+    font-family: Arial, sans-serif;
+  }
+  
+  .title {
+    color: green;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .crypto-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+  }
+  
+  .crypto-table th,
+  .crypto-table td {
+    padding: 1rem;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .crypto-table thead {
+    background-color: #f9f9f9;
+    font-weight: bold;
+  }
+  
+  .name-cell {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .coin-logo {
+    width: 24px;
+    height: 24px;
+  }
+  
+  .symbol {
+    color: gray;
+    font-weight: normal;
+  }
+  
+  .green {
+    color: green;
+  }
+  
+  .red {
+    color: red;
+  }
+  
+  .sub {
+    font-size: 0.8rem;
+    color: gray;
+  }
+  
+  .sparkline-placeholder {
+    width: 100px;
+    height: 40px;
+    background-color: #e5e5e5;
+    border-radius: 6px;
+  } 
+
+  .green-flash {
+    animation: flash-green 1s ease-in-out;
+  }
+  
+  .red-flash {
+    animation: flash-red 1s ease-in-out;
+  }
+  
+  @keyframes flash-green {
+    0% { background-color: #d4fcd4; }
+    100% { background-color: transparent; }
+  }
+  
+  @keyframes flash-red {
+    0% { background-color: #fcd4d4; }
+    100% { background-color: transparent; }
+  }
+  
+  .search-input {
+    margin: 1rem 0;
+    padding: 0.5rem;
+    width: 100%;
+    max-width: 300px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+  } 
+  
+  .sparkline-placeholder {
+    width: 100px;
+    height: 40px;
+  }  
+
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+  .crypto-table {
+    font-size: 0.85rem;
+  }
+
+  .name-cell {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .coin-logo {
+    width: 20px;
+    height: 20px;
+  }
+
+  .sparkline-placeholder {
+    width: 80px;
+    height: 30px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .crypto-table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  .crypto-table table {
+    width: 100%;
+  }
+
+  .title {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+}
